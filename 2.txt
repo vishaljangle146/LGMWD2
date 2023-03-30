@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-Do List Web App</title>
+</head>
+<body>
+	<h1>To-Do List</h1>
+	<input type="text" id="task" placeholder="Enter a task...">
+	<button onclick="addTask()">Add Task</button>
+	<ul id="taskList"></ul>
+
+	<script>
+		// Function to add task to the list
+		function addTask() {
+			var task = document.getElementById("task").value;
+			var node = document.createElement("LI");
+			var textnode = document.createTextNode(task);
+			node.appendChild(textnode);
+			document.getElementById("taskList").appendChild(node);
+			document.getElementById("task").value = "";
+		}
+	</script>
+</body>
+</html>
